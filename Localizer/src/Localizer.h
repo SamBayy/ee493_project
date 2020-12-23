@@ -41,3 +41,5 @@ public:
 	void UpdateLocation();
 	Point GetLocation();
 };
+
+double RSSI_to_Meter(double RSSI);
