@@ -50,9 +50,24 @@ ESP1 . . . ESP2. . .>y
 	double z1;
 	double z2;
 	double z3;
-
+	int x = 0
 	for (auto it = begin(targets); it != end(targets); ++it) {
-		z1 = RSSI_to_Meter(it->Rssi);
+		if(x==0){
+			z1 = RSSI_to_Meter(it->Rssi);
+			x++;
+		}
+		else if(x==1){
+			z2 = RSSI_to_Meter(it->Rssi);
+			x++;
+		}
+		else if(x==2){
+			z3 = RSSI_to_Meter(it->Rssi);
+			x++;
+		}
+		else{
+			x=0;
+		}
+		
 	}
 
 	z1 = z1 * z1;
