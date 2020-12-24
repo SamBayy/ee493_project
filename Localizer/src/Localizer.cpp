@@ -38,7 +38,7 @@ void Localizer::RemoveTarget(string name)
 void Localizer::UpdateLocation()
 {
 	/*
-x
+y
 ^
 .
 .
@@ -46,7 +46,7 @@ ESP3
 .
 .
 .
-ESP1 . . . ESP2. . .>y
+ESP1 . . . ESP2. . .>x
 */
 	double z1;
 	double z2;
