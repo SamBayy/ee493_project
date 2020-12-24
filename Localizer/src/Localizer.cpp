@@ -38,7 +38,7 @@ void Localizer::RemoveTarget(string name)
 void Localizer::UpdateLocation()
 {
 	/*
-x
+y
 ^
 .
 .
@@ -46,7 +46,7 @@ ESP3
 .
 .
 .
-ESP1 . . . ESP2. . .>y
+ESP1 . . . ESP2. . .>x
 */
 	double z1;
 	double z2;
@@ -68,8 +68,8 @@ ESP1 . . . ESP2. . .>y
 	z2 = z2 * z2;
 	z3 = z3 * z3;
 
-	location.x = (z1 - z2 + 9) / 6; //for 1 meter square area 6->2, 9->1
-	location.y = (z1 - z3 + 9) / 6; //for 1 meter square area 6->2, 9->1
+	location.x = (z2 - z1 + 9) / 6; //for 1 meter square area 6->2, 9->1
+	location.y = (z3 - z1 + 9) / 6; //for 1 meter square area 6->2, 9->1
 	location.z = 0;
 }
 
